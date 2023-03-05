@@ -1,0 +1,38 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.webpage-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f97316;
+}
+
+.title-container {
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.title-logo {
+    width: 80px;
+    height: 80px;
+}
+
+.library-title {
+    font-family: 'Signika Negative', sans-serif;
+    font-size:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
