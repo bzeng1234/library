@@ -1,8 +1,7 @@
-
-
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Signika Negative', sans-serif;
 }
 
 .webpage-container {
@@ -16,12 +15,14 @@
     display: flex;
     flex-direction: column;
     background-color: #f97316;
+    align-items: center;
 }
 
 .title-container {
     display: flex;
     margin-top: 40px;
     justify-content: center;
+    margin-right: 20px;
 }
 
 .title-logo {
@@ -30,9 +31,29 @@
 }
 
 .library-title {
-    font-family: 'Signika Negative', sans-serif;
     font-size:50px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-self: center;
+}
+
+.library-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.library-address,
+.library-hours,
+.footer {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.footer {
+    flex: 1;
+    justify-content: flex-end;
+    margin: 15px 0;
 }
