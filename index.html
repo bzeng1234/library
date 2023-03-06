@@ -40,11 +40,37 @@
         </div>
         <div class="main-content">
             <div class="button-container">
-                <button class="new-book-btn" type="button" alt="">Add Book</button>
+                <button class="new-book-btn" type="button" alt="">+ Add</button>
             </div>
             <div class="book-container">
+                <table class="book-table">
+                    <thead>
+                        <tr class="table-header">
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Pages</th>
+                            <th>Read</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+
+                    </tbody>
+                </table>
+                
                 <div class="form-container">
-                    
+                  <h2 class="form-title">Add a Book</h2>
+                  <button class="close-form-btn" type="button">X</button>
+                  <form class="book-form" action="">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" placeholder="Title" required/>
+                    <label for="author">Author</label>
+                    <input type="text" id="author" placeholder="Author" required/>
+                    <label for="pages">Pages</label>
+                    <input type="number" id="pages" placeholder="Pages" required/>
+                    <button type="submit">Add</button>
+                  </form>
                 </div>
             </div>
         </div>
