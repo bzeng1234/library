@@ -62,11 +62,11 @@
                 <div class="form-container">
                   <h2 class="form-title">Add a Book</h2>
                   <button class="close-form-btn" type="button">X</button>
-                  <form class="book-form" action="">
+                  <form class="book-form" action="" novalidate>
                     <label for="title">Title</label>
-                    <input type="text" id="title" placeholder="Title" required/>
+                    <input type="text" id="title" placeholder="Title" minlength="3" required/>
                     <label for="author">Author</label>
-                    <input type="text" id="author" placeholder="Author" required/>
+                    <input type="text" id="author" placeholder="Author" minlength="3" required/>
                     <label for="pages">Pages</label>
                     <input type="number" id="pages" placeholder="Pages" required/>
                     <button type="submit">Add</button>

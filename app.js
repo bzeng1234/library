@@ -14,6 +14,30 @@ function addBookToLibrary(title, author, numOfPages) {
     myLibrary.push(newBook);
 }
 
+function checkFormValidity(bookTitle, bookAuthor, numOfPages) {
+
+    if(!bookTitle.checkValidity()) {
+        if(bookTitle.validity.tooShort) {
+            bookTitle.placeholder = `Should be at least ${bookTitle.minLength} characters`;
+        }
+        bookTitle.classList.add("error");
+    }
+
+    if(!bookAuthor.checkValidity()) {
+        if(bookAuthor.validity.tooShort) {
+            bookAuthor.placeholder = `Should be at least ${bookAuthor.minLength} characters`;
+        }
+        bookAuthor.classList.add("error");
+    }
+
+    if(!numOfPages.checkValidity()) {
+        if(numOfPages.validity.valueMissing) {
+            numOfPages.placeholder = `Inupt a number`
+            numOfPages.classList.add("error");
+        }
+    }
+}
+
 let displayController = () => {
     let newBookBtn = document.querySelector(".new-book-btn");
 
@@ -32,8 +56,9 @@ let displayController = () => {
     let bookAuthor = document.getElementById("author");
     let numOfPages = document.getElementById("pages");
 
-    addBookToLibrary(bookTitle.value, bookAuthor.value, numOfPages.value);
-
+    if (checkFormValidity(bookTitle, bookAuthor, numOfPages))
+        addBookToLibrary(bookTitle.value, bookAuthor.value, numOfPages.value);
+    
     bookTitle.value = "";
     bookAuthor.value = "";
     numOfPages.value = "";
